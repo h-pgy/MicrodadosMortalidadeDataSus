@@ -1,4 +1,5 @@
 from datasus_download import DataSusDownloader
+import os
 
 class SIMDownloader:
     '''Baixa arquivos de D.O.  do SIM filtrando para Estado e/ou ano'''

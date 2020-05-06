@@ -1,5 +1,5 @@
 #script para baixar todos arquivos de SP
-
+import os
 
 def download_all_sp(sim_downloader, file_dir='SIM_SP'):
     sim_downloader.go_to_sim()
@@ -8,7 +8,7 @@ def download_all_sp(sim_downloader, file_dir='SIM_SP'):
 
 if __name__ == "__main__":
 
-    from SimDownloader import SIMDownloader
+    from sim_download import SIMDownloader
 
     sim_downloader = SIMDownloader()
 
