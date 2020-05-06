@@ -13,7 +13,7 @@ def converter_para_csv(path_dados, join_dfs=False):
     dfs = []
 
     for file in files:
-        rec = DBF(files, load=True).records
+        rec = DBF(file, load=True).records
         df = pd.DataFrame(rec)
         new_file = file[:-3] + 'csv'
         new_f_path = os.path.join(new_path, new_file)
