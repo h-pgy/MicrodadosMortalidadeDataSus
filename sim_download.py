@@ -1,3 +1,5 @@
+from datasus_download import DataSusDownloader
+
 class SIMDownloader:
     '''Baixa arquivos de D.O.  do SIM filtrando para Estado e/ou ano'''
 
@@ -26,7 +28,7 @@ class SIMDownloader:
 
         return [file for file in files if estado(file) and ano(file)]
 
-    def download_files(self, file_list, file_dir='SIM_SP'):
+    def download_files(self, file_list, file_dir):
 
         if not os.path.exists(file_dir):
             os.makedirs(file_dir)
