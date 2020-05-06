@@ -4,3 +4,6 @@ venv/
 prototipagem.ipynb
 *.dbf
 *.dbc
+*.ipynb_checkpoints
+*.csv
+*.xlsx
