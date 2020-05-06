@@ -31,5 +31,5 @@ class SIMDownloader:
         if not os.path.exists(file_dir):
             os.makedirs(file_dir)
 
-        for file in files:
+        for file in file_list:
             self.datasus.download(file, file_dir)
