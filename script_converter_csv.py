@@ -15,8 +15,8 @@ def converter_para_csv(path_dados, join_dfs=False):
     for file in files:
         rec = DBF(file, load=True).records
         df = pd.DataFrame(rec)
-        new_file = file[:-3] + 'csv'
-        new_f_path = os.path.join(new_path, new_file)
+        new_file =  os.path.split(file)[-1][:-3] + 'csv'
+        new_f_path = os.path.join(new_path,new_file)
         df.to_csv(new_f_path, sep=';', encoding='utf-8')
         if join_dfs:
             dfs.append(df)
