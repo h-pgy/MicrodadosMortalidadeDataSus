@@ -13,11 +13,12 @@ def converter_para_csv(path_dados, join_dfs=False):
     dfs = []
 
     for file in files:
-        rec = DBF(file, load=True).records
+        rec = DBF(file, load=True, encoding='Latin-1').records
         df = pd.DataFrame(rec)
-        new_file =  os.path.split(file)[-1][:-3] + 'csv'
-        new_f_path = os.path.join(new_path,new_file)
-        df.to_csv(new_f_path, sep=';', encoding='utf-8')
+        new_file = os.path.split(file)[-1][:-3] + 'csv'
+        new_f_path = os.path.join(new_path, new_file)
+        df.to_csv(new_f_path, sep=';', encoding='Latin-1')
+        print(f'Arquivo salvo em {new_f_path}')
         if join_dfs:
             dfs.append(df)
     if join_dfs:
